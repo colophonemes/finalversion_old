@@ -1,22 +1,11 @@
 'use strict';
 
 angular.module('finalversionApp')
-  .controller('MainCtrl', function ($scope, $http) {
-    $scope.awesomeThings = [];
-
-    $http.get('/api/things').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
-    });
-
-    $scope.addThing = function() {
-      if($scope.newThing === '') {
-        return;
+  .controller('MainCtrl', function ($scope,Auth,$location) {
+    //redirect to tasks page if we're already logged in
+    Auth.isLoggedInAsync(function(loggedIn) {
+      if(loggedIn){
+        $location.path('/tasks');
       }
-      $http.post('/api/things', { name: $scope.newThing });
-      $scope.newThing = '';
-    };
-
-    $scope.deleteThing = function(thing) {
-      $http.delete('/api/things/' + thing._id);
-    };
+    });
   });

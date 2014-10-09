@@ -46,6 +46,7 @@ angular.module('finalversionApp', [
     $rootScope.$on('$stateChangeStart', function (event, next) {
       Auth.isLoggedInAsync(function(loggedIn) {
         if (next.authenticate && !loggedIn) {
+          console.log('Not authorised, redirecting to login page');
           $location.path('/login');
         }
       });

@@ -1,25 +1,30 @@
-div(ng-include='"components/navbar/navbar.html"')
-
-header#banner.hero-unit
+header.hero-unit
   .container
-    h1 'Allo, 'Allo!
-    p.lead Kick-start your next web app with Angular Fullstack
-    img(src='assets/images/yeoman.png', alt='I\'m Yeoman')
+    h1 Welcome to Final Version
+    p.lead Get your tasks in order!
+    
+    | Based on 
+    a(href='http://archive.constantcontact.com/fs004/1100358239599/archive/1109511856508.html',target='_blank')
+      | Mark Forster's Final Version
 
 .container
   .row
-    .col-lg-12
-      h1.page-header Features:
-      ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in awesomeThings')
-        li
-          a(href='#', tooltip='{{thing.info}}')
-            | {{thing.name}}
+    .col-md-3.col-md-offset-3
+      p.center
+        | New to Final Version?  
+        br
+        a.btn.btn-default.btn-lg(href='/signup')
+          span.fa.fa-user
+          |  Sign up
+    .col-md-3
+      p.center
+        | Existing user?  
+        br
+        a.btn.btn-primary.btn-lg(href='/login')
+          span.fa.fa-sign-in
+          |  Log in
 
 footer.footer
   .container
     p
-      | Angular Fullstack v2.0.13
-      = ' | '
-      a(href='https://twitter.com/tyhenkel') @tyhenkel
-      = ' | '
-      a(href='https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open') Issues
+      | Final Version by Sam Deere

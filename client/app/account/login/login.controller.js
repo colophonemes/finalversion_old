@@ -4,7 +4,12 @@ angular.module('finalversionApp')
   .controller('LoginCtrl', function ($scope, Auth, $location) {
     $scope.user = {};
     $scope.errors = {};
-
+    //redirect back home if we're already logged in
+    Auth.isLoggedInAsync(function(loggedIn) {
+      if(loggedIn){
+        $location.path('/');
+      }
+    });
     $scope.login = function(form) {
       $scope.submitted = true;
 

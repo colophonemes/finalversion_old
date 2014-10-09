@@ -1,0 +1,590 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"text",
+				"text-indent"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"criter",
+				"criteria"
+			],
+			[
+				"post",
+				"post_type"
+			],
+			[
+				"class",
+				"class_names"
+			],
+			[
+				"curr",
+				"current_object_id"
+			],
+			[
+				"item",
+				"item_output"
+			],
+			[
+				"fea",
+				"featured_2_src"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"pag",
+				"pagination_args"
+			],
+			[
+				"is_a",
+				"is_array"
+			],
+			[
+				"crit",
+				"criterion_key"
+			],
+			[
+				"new",
+				"new_criteria"
+			],
+			[
+				"criterion_",
+				"criterion_key"
+			],
+			[
+				"cri",
+				"criteria"
+			],
+			[
+				"array_k",
+				"array_key_exists"
+			],
+			[
+				"cur",
+				"current_filter"
+			],
+			[
+				"cu",
+				"current_filter"
+			],
+			[
+				"curren",
+				"current_filter_string"
+			],
+			[
+				"fu",
+				"furniture_baseurl"
+			],
+			[
+				"_",
+				"_GET"
+			],
+			[
+				"qu",
+				"query_vars"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"bootstra",
+				"Bootstrap"
+			],
+			[
+				"col",
+				"col-sm-6"
+			],
+			[
+				"backg",
+				"background-size"
+			],
+			[
+				"img",
+				"img_lg"
+			],
+			[
+				"attac",
+				"attachments"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"bal",
+				"background-color"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"Job",
+				"jobCutsFlagged"
+			],
+			[
+				"fla",
+				"flaggedCuts"
+			],
+			[
+				"fl",
+				"flaggedCuts"
+			],
+			[
+				"jo",
+				"jobCutsTotal"
+			],
+			[
+				"raw",
+				"rawurlencode"
+			],
+			[
+				"htm",
+				"htmlentities"
+			],
+			[
+				"html",
+				"htmlspecialchars"
+			],
+			[
+				"autom",
+				"automaticallyTriggered"
+			],
+			[
+				"auto",
+				"automaticallyTriggered"
+			],
+			[
+				"slide",
+				"slideToggle"
+			],
+			[
+				"var",
+				"various"
+			],
+			[
+				"jobcu",
+				"jobcutstotal"
+			],
+			[
+				"compar",
+				"comparisons"
+			],
+			[
+				"calc",
+				"calculateJobCutsTotal"
+			],
+			[
+				"comp",
+				"comparisonsCollapsed"
+			],
+			[
+				"other",
+				"otherFrontlineIndex"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"jOb",
+				"jobCount"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"comparisons",
+				"comparisonsObj"
+			],
+			[
+				"collapse",
+				"collapseTo"
+			],
+			[
+				"com",
+				"comparisonsIndex"
+			],
+			[
+				"mixed",
+				"mixedComparisons"
+			],
+			[
+				"promises",
+				"promisesDisplayed"
+			],
+			[
+				"time",
+				"timeIncrement"
+			],
+			[
+				"totl",
+				"totalTime"
+			],
+			[
+				"coun",
+				"countIncrement"
+			],
+			[
+				"total",
+				"totalTime"
+			],
+			[
+				"count",
+				"countUpTotal"
+			],
+			[
+				"prm",
+				"promisetotal"
+			],
+			[
+				"promis",
+				"promiseTotal"
+			],
+			[
+				"calcula",
+				"calculatePromiseTotal"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"calcul",
+				"calculateTotal"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"wh",
+				"whitespace"
+			],
+			[
+				"al",
+				"alphanumeric_only"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 17309,
+				"line_ending": "Unix",
+				"name": "module.exports = function(grunt) {"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"selected_items":
+		[
+			[
+				"rev",
+				"File: Revert"
+			],
+			[
+				"Pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/sam/Dropbox/Sites/finalversion/src/js/app.js",
+		"/Users/sam/Dropbox/Sites/finalversion/package.json",
+		"/Users/sam/Dropbox/Sites/rawfurniture/template/library/css/main.css",
+		"/Users/sam/Dropbox/Sites/rawfurniture/template/functions.php",
+		"/Users/sam/Dropbox/Sites/rawfurniture/template/archive-furniture.php",
+		"/Users/sam/Dropbox/Sites/rawfurniture/template/single-furniture.php",
+		"/Users/sam/Dropbox/Sites/rawfurniture/template/front-page.php",
+		"/Users/sam/Dropbox/Sites/rawfurniture/template/library/shortcodes.php",
+		"/Users/sam/Dropbox/Sites/rawfurniture/template/page.php",
+		"/Users/sam/Dropbox/Sites/rawfurniture/template/header.php",
+		"/Users/sam/Dropbox/Sites/rawfurniture/template/library/js/scripts.js",
+		"/Users/sam/Dropbox/Sites/rawfurniture/template/footer.php",
+		"/Users/sam/Dropbox/Sites/rawfurniture/template/library/modal_image.php",
+		"/Users/sam/Dropbox/Sites/rawfurniture/template/comments.php",
+		"/Users/sam/Dropbox/Sites/Raw Furniture/template/comments.php",
+		"/Users/sam/Dropbox/Sites/Raw Furniture/template/index.php",
+		"/Users/sam/Dropbox/Sites/Raw Furniture/template/header.php",
+		"/Users/sam/Dropbox/Sites/Raw Furniture/template/library/css/main.css",
+		"/Users/sam/Dropbox/Sites/Raw Furniture/template/functions.php",
+		"/Users/sam/Dropbox/Sites/pennywong.com.au_/notes",
+		"/Users/sam/Dropbox/Sites/Raw Furniture/raw-furniture.sublime-project",
+		"/Users/sam/Sites/squarehouse/site/config/schema.js",
+		"/Users/sam/Sites/squarehouse/site/.bowerrc",
+		"/Users/sam/Sites/squarehouse/site/bower.json",
+		"/Users/sam/Sites/squarehouse/site/package.json",
+		"/Users/sam/Dropbox/Sites/squarehouse/site/package.json",
+		"/Users/sam/Dropbox/Sites/squarehouse/Gruntfile.js",
+		"/Users/sam/Dropbox/Sites/Raw Furniture/site/Gruntfile.js",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/less/frontend.less",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/scripts/controllers/payments.js",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/index.html",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/scripts/app.js",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/views/payments.html",
+		"/Users/sam/Dropbox/Sites/squarehouse/server.js",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/scripts/controllers/home.js",
+		"/Users/sam/Dropbox/Sites/squarehouse/package.json",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/views/home.html",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/less/base.less",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/less/backend.less",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/less/base.css",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/styles/base.less",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/styles/frontend.less",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/styles/backend.less",
+		"/Users/sam/Dropbox/Sites/squarehouse/app/bower_components/bootstrap/Gruntfile.js",
+		"/Users/sam/Dropbox/Sites/squarehouse/bower.json",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/dot.htaccess",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/index.html",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/application/views/global/app/header.php",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/application/controllers/ajax.php",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/assets/js/app.js",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/less/app.less",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/application/views/spendometer/index.php",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/application/views/global/app/footer.php",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/assets/js/app.min.js",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/assets/js/plugins.js",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/application/controllers/cuts.php",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/application/views/admin/spending/edit.php",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/application/config/form.php",
+		"/Users/sam/Dropbox/Sites/socialmedia.736a64.org/site/application/libraries/MY_Form_validation.php",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/application/views/global/admin/footer.php",
+		"/Users/sam/Dropbox/Sites/spendo.736a64.org/site/application/core/MY_Controller.php",
+		"/Users/sam/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"small",
+			"0",
+			"carousel-example-generic",
+			"\"",
+			"  \n",
+			"less",
+			"I",
+			"  styles: {\n        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],\n        tasks: ['newer:copy:styles', 'autoprefixer']\n      },",
+			"newe",
+			"watch",
+			"bower",
+			"@import \"",
+			"conca",
+			"less",
+			"@",
+			"less",
+			"bower-in",
+			"animate-",
+			"ng-",
+			"id",
+			"></",
+			">.</",
+			"hover",
+			"p",
+			"</span>",
+			"/span>",
+			"p",
+			"console",
+			"body",
+			"typeO",
+			"console",
+			"consol",
+			"plural",
+			"then",
+			"numeric",
+			"promise",
+			"count_"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"carousel-gallery",
+			"'",
+			"@import \"../bower_components/bootstrap/less/",
+			"data-ng-",
+			"span",
+			"</span><br>",
+			"span",
+			"comparison"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "gruntfile.js",
+					"settings":
+					{
+						"buffer_size": 17309,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								176,
+								176
+							]
+						],
+						"settings":
+						{
+							"auto_name": "module.exports = function(grunt) {",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9322.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 274.0,
+	"status_bar_visible": true
+}

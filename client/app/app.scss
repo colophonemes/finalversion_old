@@ -15,10 +15,15 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
     padding: 0.2em 0;
 }
 
+.center {
+	text-align:center;
+}
+
 // Component styles are injected through grunt
 // injector
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
 @import 'main/main.scss';
+@import 'tasks/tasks.scss';
 @import 'modal/modal.scss';
 // endinjector
