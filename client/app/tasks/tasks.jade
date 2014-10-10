@@ -1,5 +1,5 @@
-.container(ng-controller="TasksCtrl")
-	.row
+.container
+	.row#tasks(ng-show="!running")
 		.col-md-12
 			h1.pagetitle Tasks
 			ul.tasks
@@ -17,10 +17,20 @@
 					a.delete.pull-right(ng-click="destroyTask(task._id)")
 						| Delete 
 						span.fa.fa-trash
+	.row#current-tasks(ng-show="running")
+		h1.pagetitle Current tasks
+		ul.tasks
+			li.task( ng-repeat="task in selectedTasks")
+				span.index {{$index+1}}.  
+				| {{task.name}}
+	.row
+			button.btn.btn-primary(ng-click="runTasks()", ng-show="!running") Start!
+			button.btn.btn-danger(ng-click="stopTasks()", ng-show="running") Stop!
+
+
 	.row
 		.col-md-12
-			h3
-				| Add a new task:
+			h3 Add a new task:
 			form(name="newTask",ng-model="newTask",ng-submit="newTaskSubmitted()")
 				.form-horizontal
 					.form-group
@@ -36,10 +46,7 @@
 							| day
 							span(ng-show="taskRecurringInterval>1") s
 					button.btn(type="submit", ng-class="{'btn-success':newTask.$valid}", ng-disabled="newTask.$invalid") Submit
-	.row
-		.col-md-12
-			ul
-				li(ng-repeat="task in allTasks")
-					|	{{task.name}} - {{task.status}}<span ng-if="task.recurring"> - Recurring ({{task.recurringInterval}})</span> 
-					a(ng-click="destroyTask(task._id)")
-						span.fa.fa-trash
+					button.btn(type="button",
+						ng-class="{'btn-default':newTask.$dirty}",
+						ng-disabled="newTask.$pristine",
+						ng-click="resetNewTaskForm()") Clear

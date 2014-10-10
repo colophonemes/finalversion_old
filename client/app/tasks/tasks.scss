@@ -1,12 +1,49 @@
 a {
 	cursor: pointer;
 }
+#current-tasks{
+	font-size: 2em;
+	ul.tasks {
+		li.task {
+			.index {
+				color: #999;
+			}
+		}
+	}
+}
 ul.tasks{
 	padding:0;
+
+
+	// &.running {
+	// 	li.task{
+	// 		opacity: 0.5;
+	// 		&.selected {
+	// 			opacity: 1;
+	// 		}
+	// 	}
+	// }
+
+	// display:block!important;
+	// -moz-transition:all linear 1s;
+	// -o-transition:all linear 1s;
+	// transition:all linear 1s;
+	// -webkit-transition:all linear 1s;
+	// transition:all linear 1s;
+	// opacity:1;
+	// &.ng-hide-add{
+	// 	display:block!important;
+	// }
+	// &.ng-hide-remove {
+	// 	display:block!important;
+	// }
+	// &.ng-hide {
+	// 	opacity:0;
+	// }
 }
 li.task {
-	margin: 5px;
-	padding: 5px;
+	margin: 5px -15px;
+	padding: 5px 15px;
 	border: 1px solid #DDD;
 	list-style-type:none;
 	&.active{
