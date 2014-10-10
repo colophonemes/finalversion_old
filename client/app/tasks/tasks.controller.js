@@ -49,12 +49,14 @@ angular.module('finalversionApp')
    	}
 	// mark a task as currently 'selected' in the database
 	$scope.setTaskAsSelected = function(id, selected){
-		//if(id) return
-		TasksService.setTaskAsSelected(id,selected)
-		.then( function(){
-			//success
-			console.log('Task selected');
-		});
+		// Update server
+		TasksService.setTaskAsSelected(id,selected);
+		// Update client
+		for (var i=0; i<$scope.tasks.length; i++){
+			if ($scope.tasks[i]._id == id){
+				$scope.tasks[i].selected = selected;
+			}
+		}
 	}
     // delete a specific task
     $scope.destroyTask = function(id){
@@ -68,15 +70,14 @@ angular.module('finalversionApp')
     $scope.running = false;
     $scope.runTasks = function(){
     	$scope.running = true;
-    	// get a copy of the items that are currently selected
-    	$scope.selectedTasks = $scope.tasks.slice(0);
-    	for (var i = 0 ; i < $scope.selectedTasks.length; i++) {
-    		if(!$scope.selectedTasks[i].selected){
-    			$scope.selectedTasks.splice(i,1);
+    	// set a blank list of tasks
+    	$scope.selectedTasks = [];
+    	for (var i = 0 ; i < $scope.tasks.length; i++) {
+    		if($scope.tasks[i].selected === true){
+    			$scope.selectedTasks.push($scope.tasks[i]);
     		}
     	};
     	$scope.selectedTasks.sort( h.sortArrayByObjKey('-date') );
-    	console.log($scope.selectedTasks);
     }
     $scope.stopTasks = function(){
     	$scope.running = false;
