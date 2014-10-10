@@ -2,9 +2,21 @@
 	.row
 		.col-md-12
 			h1.pagetitle Tasks
-			ul
-				li(ng-repeat="task in tasks")
-					|	{{task.name}} - {{task.status}}<span ng-if="task.recurring"> - Recurring ({{task.recurringInterval}})</span>
+			ul.tasks
+				li.task( ng-repeat="task in tasks",
+					ng-class="{active: hover, selected: selected}",
+					ng-mouseenter="hover = true",
+					ng-mouseleave="hover = false",
+					ng-init="selected = task.selected"
+					)
+					a.set-selected(ng-click="selected=!selected; setTaskAsSelected(task._id,selected)")
+						span.fa.fa-arrow-circle-right(ng-show="selected") 
+						|  {{task.name}}
+						| - {{task.status}}
+						|<span ng-if="task.recurring"> - Recurring ({{task.recurringInterval}})</span> 
+					a.delete.pull-right(ng-click="destroyTask(task._id)")
+						| Delete 
+						span.fa.fa-trash
 	.row
 		.col-md-12
 			h3
@@ -24,3 +36,10 @@
 							| day
 							span(ng-show="taskRecurringInterval>1") s
 					button.btn(type="submit", ng-class="{'btn-success':newTask.$valid}", ng-disabled="newTask.$invalid") Submit
+	.row
+		.col-md-12
+			ul
+				li(ng-repeat="task in allTasks")
+					|	{{task.name}} - {{task.status}}<span ng-if="task.recurring"> - Recurring ({{task.recurringInterval}})</span> 
+					a(ng-click="destroyTask(task._id)")
+						span.fa.fa-trash

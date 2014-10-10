@@ -1,0 +1,25 @@
+a {
+	cursor: pointer;
+}
+ul.tasks{
+	padding:0;
+}
+li.task {
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid #DDD;
+	list-style-type:none;
+	&.active{
+		background-color: #DDD;
+		a.delete {
+			display: inline-block;
+		}
+	}
+	&.selected{
+		background-color: #DDF;
+	}
+	a.delete {
+		display:none;
+		color: #F00;
+	}
+}

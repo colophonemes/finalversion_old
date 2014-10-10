@@ -11,6 +11,14 @@ exports.index = function(req, res) {
   });
 };
 
+// Get list of tasks by user ID
+exports.getTasksByUserId = function(req, res) {
+  Task.find({user:req.params.id},function (err, tasks) {
+    if(err) { return handleError(res, err); }
+    return res.json(200, tasks);
+  });
+};
+
 // Get a single task
 exports.show = function(req, res) {
   Task.findById(req.params.id, function (err, task) {
@@ -53,6 +61,7 @@ exports.destroy = function(req, res) {
     });
   });
 };
+
 
 function handleError(res, err) {
   return res.send(500, err);
