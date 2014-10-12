@@ -1,6 +1,37 @@
+// Globals
+
 a {
 	cursor: pointer;
 }
+
+
+// route change FX
+.ui-view-container {
+  position: relative;
+}
+[ui-view].ng-enter, [ui-view].ng-leave {
+	position: absolute;
+	left: 0;
+	right: 0;
+	transition:all .3s ease-in-out;
+}
+
+[ui-view].ng-enter {
+	opacity: 0;
+}
+
+[ui-view].ng-enter-active {
+	opacity: 1;
+}
+
+[ui-view].ng-leave {
+	opacity: 1; 
+}
+
+[ui-view].ng-leave-active {
+	opacity: 0;
+}
+// UI
 #current-tasks{
 	font-size: 2em;
 	ul.tasks {
@@ -13,33 +44,6 @@ a {
 }
 ul.tasks{
 	padding:0;
-
-
-	// &.running {
-	// 	li.task{
-	// 		opacity: 0.5;
-	// 		&.selected {
-	// 			opacity: 1;
-	// 		}
-	// 	}
-	// }
-
-	// display:block!important;
-	// -moz-transition:all linear 1s;
-	// -o-transition:all linear 1s;
-	// transition:all linear 1s;
-	// -webkit-transition:all linear 1s;
-	// transition:all linear 1s;
-	// opacity:1;
-	// &.ng-hide-add{
-	// 	display:block!important;
-	// }
-	// &.ng-hide-remove {
-	// 	display:block!important;
-	// }
-	// &.ng-hide {
-	// 	opacity:0;
-	// }
 }
 li.task {
 	margin: 5px -15px;
@@ -53,7 +57,7 @@ li.task {
 		}
 	}
 	&.selected{
-		background-color: #DDF;
+		background-color: #DEF;
 	}
 	a.delete {
 		display:none;
@@ -61,5 +65,12 @@ li.task {
 	}
 	&.complete {
 		text-decoration: line-through;
+	}
+}
+
+.question {
+	color: #999;
+	.question-subject {
+		color: #000;
 	}
 }

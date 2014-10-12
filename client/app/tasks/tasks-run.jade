@@ -1,0 +1,15 @@
+.row#current-tasks
+	h1.pagetitle Run tasks
+	ul.tasks
+		li.task( ng-repeat="task in tasks | filter : {selected : true} | reverse",ng-class="task.status")
+			span.index {{$index+1}}.  
+			| {{task.name}}
+			span(ng-show="$first")
+				button.btn.btn-default(ng-click="updateTask(task._id,{selected:false, status:'incomplete', date: 'now'})") Done working 
+					span.fa.fa-caret-square-o-right
+					| 
+				button.btn.btn-success(ng-click="updateTask(task._id,{selected:false, status:'complete'})") Completed 
+					span.fa.fa-check-square
+.row
+	a.btn.btn-default(href="/tasks/select" ng-show="tasksSelectedCount > 0") Back
+	a.btn.btn-success(href="/tasks" ng-show="tasksSelectedCount == 0") All done!

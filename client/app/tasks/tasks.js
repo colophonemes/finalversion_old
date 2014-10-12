@@ -8,10 +8,14 @@ angular.module('finalversionApp')
         templateUrl: 'app/tasks/tasks.html',
         controller: 'TasksCtrl',
         authenticate: true
-      });
-      $stateProvider.state('tasks_select', {
-        url: '/tasks/select',
-        templateUrl: 'app/tasks/tasks_select.html',
+      }).state('tasks.select', {
+        url: '/select',
+        templateUrl: 'app/tasks/tasks-select.html',
+        controller: 'TasksCtrl',
+        authenticate: true
+      }).state('tasks.run', {
+        url: '/run',
+        templateUrl: 'app/tasks/tasks-run.html',
         controller: 'TasksCtrl',
         authenticate: true
       });

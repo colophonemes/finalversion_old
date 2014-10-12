@@ -98,26 +98,11 @@ angular.module('finalversionApp')
     	}
     	// console.log('tasks',$scope.tasksCount,'selected',$scope.tasksSelectedCount);
     };
-    // things to do if the 'tasks' array changes
+    // watch for things to do if the 'tasks' array changes
     $scope.$watch('tasks',function(newValue,Oldvalue){
     	countTasks();
     	sortTasks();
     },true);
-    // tell the view whether we're running tasks or not
-    $scope.started = false;
-    // function for running 
-    $scope.startTasks = function(){
-    	$scope.started = true;
-
-    }
-    $scope.stopTasks = function(){
-    	$scope.started = false;
-    }
-
-
-    /////////////
-   	//   RUN   //
-    /////////////
 
 
 }).filter('reverse', function() {
