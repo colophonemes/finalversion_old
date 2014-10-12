@@ -9,4 +9,10 @@ angular.module('finalversionApp')
         controller: 'TasksCtrl',
         authenticate: true
       });
+      $stateProvider.state('tasks_select', {
+        url: '/tasks/select',
+        templateUrl: 'app/tasks/tasks_select.html',
+        controller: 'TasksCtrl',
+        authenticate: true
+      });
   });

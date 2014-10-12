@@ -11,8 +11,13 @@ var TaskSchema = new Schema({
   recurring: Boolean,
   recurringInterval: Number,
   status: String,
-  date: {type: Date, default: Date.now},
+  date: {type: Date, default: Date.now, set: sanitiseDate },
   selected: {type: Boolean, default: false},
 });
+
+function sanitiseDate(date){
+	if(date=='now')	date = Date.now();
+	return date;
+}
 
 module.exports = mongoose.model('Task', TaskSchema);

@@ -61,6 +61,15 @@ angular.module('finalversionApp', [
       l : function (){
         console.log(arguments);
       },
+      findObjectByKey : function(arr, key, value){
+        for (var i=0; i<arr.length; i++){
+          //console.log(arr[i],key, value);
+           if ( arr[i][key] == value ){
+             return i;
+           }
+        }
+        return -1;
+      },
       // sort array by object key
       sortArrayByObjKey : function (property) {
         var sortOrder = 1;

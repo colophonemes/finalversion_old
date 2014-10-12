@@ -1,9 +1,7 @@
 .container
 	.row#tasks(ng-show="!started")
 		.col-md-12
-			h1.pagetitle All Tasks 
-				a.btn.btn-primary(href="tasks/select") Start selecting tasks 
-					span.fa.fa-arrow-right
+			h1.pagetitle Select Tasks 
 			ul.tasks
 				li.task( ng-repeat="task in tasks",
 					ng-class="{active: hover, selected: task.selected, complete:task.status=='complete'}",

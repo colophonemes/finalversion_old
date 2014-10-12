@@ -10,6 +10,8 @@ angular.module('finalversionApp')
       getTasksByUserId: getTasksByUserId,
       createTask: createTask,
       setTaskAsSelected: setTaskAsSelected,
+      setTaskStatus: setTaskStatus,
+      updateTask: updateTask,
       destroyTask: destroyTask
     };
 
@@ -39,12 +41,19 @@ angular.module('finalversionApp')
       });
       return request.then(handleSuccess,handleError);
 		}
-
+    // set task as selected or not
     function setTaskAsSelected (id,selected,callback){
-      //selected =  selected || true;
       return $http.put('/api/tasks/'+id,{selected:selected});
     }
-
+    // update task status
+    function setTaskStatus (id,status,callback){
+      return $http.put('/api/tasks/'+id,{status:status});
+    } 
+    function updateTask (id, data, callback){
+      // build request
+      var request = $http.put('/api/tasks/'+id,data);
+      return request.then(handleSuccess, handleError);
+    }
     function destroyTask (id,callback){
       return $http.delete('/api/tasks/'+id);
     }

@@ -59,4 +59,7 @@ li.task {
 		display:none;
 		color: #F00;
 	}
+	&.complete {
+		text-decoration: line-through;
+	}
 }
