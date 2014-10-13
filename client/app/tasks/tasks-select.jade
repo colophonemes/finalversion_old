@@ -1,37 +1,19 @@
-.row#tasks(ng-show="!started")
-	.col-md-12
+.row
+	.col-sm-12
 		h1.pagetitle Select Tasks 
 		h3.question What do you want to do before you do 
 			span.question-subject {{tasks[0].name.toLowerCase()}}?
-		ul.tasks
+		ul.tasks.tasks-select
 			li.task( ng-repeat="task in tasks",
-				ng-class="{active: hover, selected: task.selected, complete:task.status=='complete'}",
+				ng-class="{selected: task.selected}",
 				ng-mouseenter="hover = true",
-				ng-mouseleave="hover = false"
+				ng-mouseleave="hover = false",
+				ng-click="Tasks.setTaskAsSelected(task._id,!task.selected)"
 				)
-				a.set-selected(ng-click="setTaskAsSelected(task._id,!task.selected)" ng-if="task.status != 'complete'")
-					span.fa.fa-arrow-circle-right(ng-show="task.selected") 
-					|  {{task.name}}
-					span(ng-if="task.recurring") - Recurring ({{task.recurringInterval}})
-				span(ng-if="task.status == 'complete'")
-					|  {{task.name}} 
-					a.btn.btn-default(ng-click="updateTask(task._id,{status:'incomplete'})")
-						span.fa.fa-undo
-				a.delete.pull-right(ng-click="destroyTask(task._id)")
-					| Delete 
-					span.fa.fa-trash
-.row#current-tasks(ng-show="started")
-	h1.pagetitle Current tasks
-	ul.tasks
-		li.task( ng-repeat="task in tasks | filter : {selected : true} | reverse",ng-class="task.status")
-			span.index {{$index+1}}.  
-			| {{task.name}}
-			span(ng-show="$first")
-				button.btn.btn-default(ng-click="updateTask(task._id,{selected:false, status:'incomplete', date: 'now'})") Done working 
-					span.fa.fa-caret-square-o-right
-					| 
-				button.btn.btn-success(ng-click="updateTask(task._id,{selected:false, status:'complete'})") Completed 
-					span.fa.fa-check-square
-.row(ng-show="tasksSelectedCount > 0")
+				span.fa.fa-arrow-circle-right(ng-show="task.selected") 
+				|  {{task.name}}
+				span(ng-if="task.recurring") - Recurring ({{task.recurringInterval}})
+.row
+	.col-sm-12
 		a.btn.btn-default(href="/tasks") Go back
-		a.btn.btn-primary(href="/tasks/run") Start!
+		a.btn.btn-primary(href="/tasks/run" ng-show="tasksCount.selected > 0") Start!

@@ -32,45 +32,57 @@ a {
 	opacity: 0;
 }
 // UI
-#current-tasks{
-	font-size: 2em;
-	ul.tasks {
+
+ul.tasks{
+	padding:0;
+	li.task {
+		margin: 5px -15px;
+		padding: 5px 15px;
+		border: 1px solid #DDD;
+		list-style-type:none;
+		&:hover{
+			background-color: #DDD;
+			a.delete {
+				display: inline-block;
+			}
+		}
+		&.selected{
+			background-color: #DEF;
+		}
+		a.delete {
+			display:none;
+			color: #F00;
+		}
+		&.complete {
+			text-decoration: line-through;
+		}
+	}
+	&.tasks-select {
 		li.task {
+			cursor: pointer;
+		}
+	}
+	&.tasks-run {
+
+		li.task {
+			font-size: 2em;
+			color: #DDD;
+			.btn {
+				margin-left:10px;
+			}
+			&.current {
+				color: #000;
+			}
 			.index {
-				color: #999;
+				color:#DDD;
 			}
 		}
 	}
 }
-ul.tasks{
-	padding:0;
-}
-li.task {
-	margin: 5px -15px;
-	padding: 5px 15px;
-	border: 1px solid #DDD;
-	list-style-type:none;
-	&.active{
-		background-color: #DDD;
-		a.delete {
-			display: inline-block;
-		}
-	}
-	&.selected{
-		background-color: #DEF;
-	}
-	a.delete {
-		display:none;
-		color: #F00;
-	}
-	&.complete {
-		text-decoration: line-through;
-	}
-}
-
 .question {
 	color: #999;
 	.question-subject {
 		color: #000;
 	}
 }
+

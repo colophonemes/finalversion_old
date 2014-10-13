@@ -1,13 +1,13 @@
 .ui-view-container
 	.container(ui-view="")
-		.row#tasks(ng-show="!started")
-			.col-md-12
+		.row
+			.col-sm-12
 				h1.pagetitle All Tasks 
 					a.btn.btn-primary(href="tasks/select") Get started 
 						span.fa.fa-arrow-right
 				ul.tasks
 					li.task( ng-repeat="task in tasks",
-						ng-class="{active: hover, complete:task.status=='complete'}",
+						ng-class="{complete:task.status=='complete'}",
 						ng-mouseenter="hover = true",
 						ng-mouseleave="hover = false"
 						)
@@ -15,42 +15,28 @@
 							|  {{task.name}} 
 							a.btn.btn-default.btn-xs(ng-if="task.status == 'complete'" ng-click="updateTask(task._id,{status:'incomplete'})")
 								span.fa.fa-undo
-						a.delete.pull-right(ng-click="destroyTask(task._id)")
+						a.delete.pull-right(ng-click="Tasks.destroyTask(task._id)")
 							| Delete 
 							span.fa.fa-trash
-		.row#current-tasks(ng-show="started")
-			h1.pagetitle Current tasks
-			ul.tasks
-				li.task( ng-repeat="task in tasks | filter : {selected : true} | reverse",ng-class="task.status")
-					span.index {{$index+1}}.  
-					| {{task.name}}
-					span(ng-show="$first")
-						button.btn.btn-default(ng-click="updateTask(task._id,{selected:false, status:'incomplete', date: 'now'})") Done working 
-							span.fa.fa-caret-square-o-right
-							| 
-						button.btn.btn-success(ng-click="updateTask(task._id,{selected:false, status:'complete'})") Completed 
-							span.fa.fa-check-square
-
-
 		.row
-			.col-md-12
+			.col-sm-12
 				h3 Add a new task:
-				form(name="newTask",ng-model="newTask",ng-submit="newTaskSubmitted()")
+				form(name="newTaskForm.form",ng-submit="newTaskSubmitted()" novalidate)
 					.form-horizontal
 						.form-group
-							label.sr-only(for="taskName") Add new task:
-							input.form-control(type="text",name="taskName",ng-model="taskName", placeholder="Add new task" required)
+							label.sr-only(for="newTaskForm.taskName") Add new task:
+							input.form-control(type="text",ng-model="newTaskForm.taskName", placeholder="Add new task" required)
 					.form-inline
 						.checkbox
-							label(for="taskRecurring") Is this a recurring task? 
-								input.form-control(type="checkbox",name='taskRecurring',ng-model="taskRecurring",checked=unchecked)
-						.form-group(ng-show="taskRecurring")
+							label(for="newTaskForm.taskRecurring") Is this a recurring task? 
+								input.form-control(type="checkbox",ng-model="newTaskForm.taskRecurring",checked=unchecked)
+						.form-group(ng-show="newTaskForm.taskRecurring")
 							label Repeat every
-								input.form-control(type="number", name="taskRecurringInterval", ng-model="taskRecurringInterval", value="5", ng-required="taskRecurring", min="1" ng-pattern="/^[1-9]*$/")
+								input.form-control(type="number", ng-model="newTaskForm.taskRecurringInterval", value="5", ng-required="newTaskForm.taskRecurring", min="1" ng-pattern="/^[1-9]*$/")
 								| day
 								span(ng-show="taskRecurringInterval>1") s
-						button.btn(type="submit", ng-class="{'btn-success':newTask.$valid}", ng-disabled="newTask.$invalid") Submit
+						button.btn(type="submit", ng-class="{'btn-success':newTaskForm.form.$valid}", ng-disabled="newTaskForm.form.$invalid") Submit
 						button.btn(type="button",
 							ng-class="{'btn-default':newTask.$dirty}",
-							ng-disabled="newTask.$pristine",
+							ng-disabled="newTaskForm.form.$pristine",
 							ng-click="resetNewTaskForm()") Clear

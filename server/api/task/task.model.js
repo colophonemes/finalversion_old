@@ -10,7 +10,7 @@ var TaskSchema = new Schema({
   user: ObjectId,
   recurring: Boolean,
   recurringInterval: Number,
-  status: String,
+  status: {type:String, default: 'incomplete'},
   date: {type: Date, default: Date.now, set: sanitiseDate },
   selected: {type: Boolean, default: false},
 });
